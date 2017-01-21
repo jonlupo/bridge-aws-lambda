@@ -1,5 +1,5 @@
 #!/usr/bin/python
-from generatepdf import parsepbn as pbn
+from bridgelib import pbn
 
 string_withcomments =  """
     [Event "##11.14 Ansley Aces"]\r\n
