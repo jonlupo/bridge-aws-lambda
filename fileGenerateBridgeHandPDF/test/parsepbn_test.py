@@ -1,5 +1,5 @@
 #!/usr/bin/python
-from parsepbn import *
+from generatepdf import parsepbn as pbn
 
 string_withcomments =  """
     [Event "##11.14 Ansley Aces"]\r\n
@@ -49,16 +49,16 @@ string_tags =  """
 
 
 def test_single_tag():
-    expr.parseString('[Event "A bunch of stuff"]')
-    r = expr.parseString('[Event "A bunch of stuff"]')
+    pbn.expr.parseString('[Event "A bunch of stuff"]')
+    r = pbn.expr.parseString('[Event "A bunch of stuff"]')
     return r
 
 
 def test_mult_tag():
-    r = grammar.parseString(string_tags)
+    r = pbn.grammar.parseString(string_tags)
     return r
 
 
 def test_mult_tag_wcomments():
-    r = grammar.parseString(string_withcomments)
+    r = pbn.grammar.parseString(string_withcomments)
     return r

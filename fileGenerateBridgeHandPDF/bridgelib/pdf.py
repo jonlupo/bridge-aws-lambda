@@ -8,7 +8,7 @@ from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import letter, A4
 from reportlab.lib.units import inch
 
-from parsepbn import grammar
+from pbn import grammar
 
 SPADE = u'\u2660'
 HEART = u'\u2665'
@@ -82,15 +82,3 @@ def createPDF():
     return pdf
 
 
-
-
-def test_createPDF():
-    f = open('test.pdf', 'wb')
-    pdf = createPDF()
-    f.write(pdf)
-    f.close()
-
-
-
-if __name__ == '__main__':
-    test_createPDF()
